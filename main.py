@@ -5,6 +5,10 @@ import os
 datastore_client = google.cloud.datastore.Client()
 app = flask.Flask(__name__)
 
+@app.route('/')
+def index():
+  return flask.redirect('/')
+
 @app.route('/hello')
 def hello():
   return "Hello World!\n"
@@ -25,4 +29,4 @@ def add(user):
   return "Hello {name}\n".format(name=user)
 
 if __name__ == '__main__':
-  app.run('0.0.0.0', port=6666)
+  app.run('0.0.0.0', port=8080)
