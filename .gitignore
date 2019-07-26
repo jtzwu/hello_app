@@ -1,0 +1,6 @@
+env/
+.vscode
+docker-compose.yml
+skaffold.yaml
+.dev
+*~
