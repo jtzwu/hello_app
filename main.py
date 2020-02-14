@@ -29,4 +29,4 @@ def add(user):
   return "Hello {name}\n".format(name=user)
 
 if __name__ == '__main__':
-  app.run('0.0.0.0', port=8080)
+  app.run('0.0.0.0', port=os.environ['PORT'])
